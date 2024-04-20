@@ -3,7 +3,7 @@ from pyecharts.options import *
 
 
 #打开文件
-f = open("C:\\Users\\jinpengcheng\\Desktop\\新建文件夹\\分省年度数据.csv", "r", encoding="GB2312")
+f = open("分省年度数据.csv", "r", encoding="GB2312")
 #读取数据，字符串列表
 date_lines = f.readlines()
 #关闭文件
@@ -37,7 +37,7 @@ sorted_year_list = sorted(date_dict.keys())
 timeline = Timeline()
 for year in sorted_year_list:
     date_dict[year].sort(key=lambda element: element[1], reverse=True)
-    year_date = date_dict[year][0:10]
+    year_date=date_dict[year][:20]
     x_date = []
     y_date = []
     for province_gdp in year_date:

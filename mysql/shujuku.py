@@ -29,7 +29,7 @@ cursor.execute("insert into test_pymysql (id,info) value('003','陈凯'),('004',
 #执行插入语句后要通过链接对象提交确认
 #conn.commit()
 
-
+#数据读取
 
 
 #关闭链接
